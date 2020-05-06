@@ -25,7 +25,7 @@ include 'libs.php';
     </nav>
     <nav class="authorization">
       <a href="#" data-toggle="modal" data-target="#exampleModal">ВХОД</a>
-      <a href="">РЕГИСТРАЦИЯ</a>
+      <a href="#" data-toggle="modal" data-target="#exampleModal3">РЕГИСТРАЦИЯ</a>
     </nav>
   </header>
   <section class="first-screen">
@@ -35,7 +35,7 @@ include 'libs.php';
     margin-top: 60px;
 ">МЫ - НЕ ВСЕ !</h1>
       <h3>МЫ - КОММАНДА !</h3>
-      <a href="">НАЧАТЬ</a>
+      <a href="#" data-toggle="modal" data-target="#modal4">НАЧАТЬ</a>
     </section>
   </section>
   <section class="second-screen">
@@ -101,27 +101,30 @@ include 'libs.php';
           <a href="<?php echo $urls['yt'];?>">
             <img src="./img/yt.png">
           </a>
-          <a href="<?php echo $urls['ok'];?>">
-            <img src="./img/ok.png">
-          </a>
           <a href="<?php echo $urls['vk'];?>">
             <img src="./img/vk.png">
+          </a>
+          <a href="<?php echo $urls['ok'];?>">
+            <img src="./img/ok.png">
           </a>
         </section>
       </section>
   </footer>
-  <script type="text/javascript" src="https://vk.com/js/api/openapi.js?167"></script>
-
 
   <?php include 'modals.php'; ?>
+
+
 <!-- VK Widget -->
 <script type="text/javascript" src="https://vk.com/js/api/openapi.js?168"></script>
 
 <!-- VK Widget -->
 <div id="vk_community_messages"></div>
 <script type="text/javascript">
-VK.Widgets.CommunityMessages("vk_community_messages", <?php echo $vk['id'];?>, {expandTimeout: "<?php echo $vk['sec'];?>000",widgetPosition: "left",tooltipButtonText: "Есть вопрос?"});
+VK.Widgets.CommunityMessages("vk_community_messages", <?php echo $vk['id'];?>, {expandTimeout: "<?php echo $vk['sec'];?>000",tooltipButtonText: "Есть вопрос?"});
 </script>
+
+
+
   <script>
     function detproc(one,two){
      var three = one / 100;
