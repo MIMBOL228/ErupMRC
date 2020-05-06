@@ -97,17 +97,7 @@ include 'libs.php';
         <p><?php echo $project['tel'];?></p>
         <p><?php echo $project['email'];?></p>
       </section>
-      <section class="links">
-          <a href="<?php echo $urls['yt'];?>">
-            <img src="./img/yt.png">
-          </a>
-          <a href="<?php echo $urls['vk'];?>">
-            <img src="./img/vk.png">
-          </a>
-          <a href="<?php echo $urls['ok'];?>">
-            <img src="./img/ok.png">
-          </a>
-        </section>
+      <?php include 'links.php'; ?>
       </section>
   </footer>
 
