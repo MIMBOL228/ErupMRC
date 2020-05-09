@@ -2,16 +2,16 @@
 include 'libs.php';
 ?>
 <!DOCTYPE html>
-<html lang="en">
-  <?php include 'head.php';?>
+<html>
+  <?php include 'index/head.php';?>
 <body>
 <?php 
- include 'header.php';
- include 'sections.php';
- include 'footer.php'; 
+ include 'index/header.php';
+ include 'index/sections.php';
+ include 'index/footer.php'; 
  include 'modals.php'; 
- include 'vk_vidget.php';  
- include 'monitoring.php'; 
+ include 'index/vk_vidget.php';  
+ include 'index/monitoring.php'; 
 ?>
 </body>
 </html>
