@@ -49,6 +49,10 @@ if ( is_session_started() === FALSE ) session_start();
   function locat($site,$time = 0){
     echo "<meta http-equiv='refresh' content='$time; url=$site'>";
   }
+  function transptoj($text){
+    $tex = json_encode($text);
+    return "JSON.parse('".$tex."')";
+}
   function Send_Mail($to,$subject,$body){
    $emaill = $GLOBALS['emaill'];
    $from       = $emaill['login'];
