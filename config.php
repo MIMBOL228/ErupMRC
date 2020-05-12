@@ -22,7 +22,7 @@
       'name' => 'TestdCraft', //Имя проекта
       'email' => 'testmail@mail.com', //Почта проекта
       'tel' => '+79123456789', //Телефон проекта (или вторая почта)
-      'img' => 'computer_25734.png', //Иконка сайта в папке img
+      'img' => 'favicon.png', //Иконка сайта в папке img
     ];
   $emaill = [  // SMTP сервер
     'login' => 'administrarion1@executeworld.ru', // Имя пользователя почтового сервера

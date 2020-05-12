@@ -1,5 +1,6 @@
 <?php
-    function con() {
+ class sqlm {
+  public function con() {
      $dsn = sprintf('mysql:dbname=%s;host=%s;charset=utf8;', $GLOBALS['db']['dbname'], $GLOBALS['db']['ip']);
      $user = $GLOBALS['db']['user'];
      $password = $GLOBALS['db']['password'];
@@ -10,11 +11,11 @@
      }
      return $connection;
     }
-    function startsWith ($string, $startString){
+    public function startsWith ($string, $startString){
      $len = strlen($startString);
      return (substr($string, 0, $len) === $startString);
     }
-    function query(string $sql, array $parameters){
+    public function query(string $sql, array $parameters){
      $statement = con()->prepare($sql);
      $newParameters = [];
      foreach ($parameters as $key => $value) {
@@ -29,9 +30,10 @@
         return $statement->fetch(PDO::FETCH_ASSOC);
      return [];
     }
-    function table($table,$or=0,$do=99999){
+    public function table($table,$or=0,$do=99999){
      $con = mysqli_connect($GLOBALS['db']['ip'],$GLOBALS['db']['user'],$GLOBALS['db']['password'],$GLOBALS['db']['dbname']);
      $result = mysqli_query($con,"SELECT * FROM `$table` LIMIT $or,$do")  or die(mysqli_error($con));
      mysqli_close($con);
      return $result;
     }
+}
