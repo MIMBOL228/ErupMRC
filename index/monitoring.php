@@ -4,7 +4,7 @@ function detproc(one,two){
     var c = two / three;
     return Math.round(c);
    }
-  var server = <?php echo transptoj($servers); ?>;
+  var server = <?php echo transptoj($confi->servers); ?>;
    function scan(ip,id,id_procces,server){
      $.ajax({
        url: 'https://api.mcsrvstat.us/2/' + ip,         /* Куда пойдет запрос */

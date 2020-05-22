@@ -4,4 +4,29 @@ $myDictionary = ["4r5e","script","alert", "5h1t", "5hit", "a55", "anal", "anus",
 $zapret_slova = [
     "script",
     "alert",
-    ];
+];
+include 'ObsceneCensorRus.php';
+include 'PhpBadWords.php';
+use \Expalmer\PhpBadWords\PhpBadWords as BadWords;
+use Wkhooy\ObsceneCensorRus as ObsceneCensorRus;
+$badwords = new BadWords;
+$ObsceneCensorRus = new ObsceneCensorRus;
+function mat($text){
+    $text1=$text;
+    $yt = false;
+    if (preg_match("/>/", $text)){
+      $yt = true;
+    }
+    if (preg_match("/</", $text)){
+      $yt = true;
+    }
+    $badwords = $GLOBALS['badwords'];
+    $class = $GLOBALS['ObsceneCensorRus'];
+    $badwords->setDictionaryFromArray($GLOBALS['myDictionary']);
+    $badwords->setText($text);
+    $class::filterText($text); 
+    if($badwords->check() || $text != $text1 || $yt)
+     return true; 
+    else 
+     return false;
+}

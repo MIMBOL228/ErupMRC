@@ -1,5 +1,5 @@
 <?php
-$users = [
+/*$users = [
  '_MIMBOL_' => 'e33b65921a103b00bf95c8f906e1734b'
 ];
 $servers = [
@@ -34,4 +34,8 @@ if($ii){
     if($ii == false)
      hak();
 }else 
- exit ("Неверный логин или пароль!");
+ exit ("Неверный логин или пароль!");*/
+ ini_set("error_reporting", 1);
+ ini_set("display_errors", 1);
+ $d = new mysqlo();
+ var_dump($d->query("SELECT * FROM test",[]));
